@@ -1,11 +1,213 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>wee-tw</title>
-</head>
-<body>
-  <h1>Hello, this is my personal website.</h1>
-  <p>Welcome to wee-tw.github.io</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wee-tw | GitHub Pages</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f7f5ef;
+        --text: #202124;
+        --muted: #5f6368;
+        --line: #d9d3c7;
+        --accent: #176b87;
+        --accent-strong: #114e63;
+        --panel: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Arial, "Helvetica Neue", sans-serif;
+        line-height: 1.6;
+      }
+
+      header {
+        border-bottom: 1px solid var(--line);
+        background: var(--panel);
+      }
+
+      nav,
+      main {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      nav {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        font-weight: 700;
+        color: var(--accent-strong);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .hero {
+        padding: 72px 0 40px;
+        display: grid;
+        gap: 20px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 8vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 1.15rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border: 1px solid var(--accent);
+        border-radius: 6px;
+        background: var(--accent);
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--accent);
+      }
+
+      section {
+        padding: 28px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      h2 {
+        margin: 0 0 12px;
+        font-size: 1.5rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        min-height: 150px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        width: min(980px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 28px 0 40px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Primary navigation">
+        <div class="brand">wee-tw</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <h1 id="page-title">Welcome to my GitHub Pages site</h1>
+        <p class="lead">
+          This site collects my CI001 course work, programming practice, and learning progress.
+        </p>
+        <div class="actions">
+          <a class="button" href="https://github.com/wee-tw/11501_CI001">Course Repository</a>
+          <a class="button secondary" href="https://github.com/wee-tw">GitHub Profile</a>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hi, I am wee-tw. I am learning C++ programming, Git, GitHub, and Markdown through the
+          CI001 course.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>11501_CI001</h3>
+            <p>Course assignments, lab practice, and documentation for C++ Programming Laboratory (I).</p>
+          </article>
+          <article class="card">
+            <h3>GitHub Pages</h3>
+            <p>A simple personal website built with HTML and published through GitHub Pages.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: TODO: your student ID@mail.yzu.edu.tw</p>
+      </section>
+    </main>
+
+    <footer>
+      <small>&copy; 2026 wee-tw. Built for CI001 Assignment I.</small>
+    </footer>
+  </body>
 </html>
+
